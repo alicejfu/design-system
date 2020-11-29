@@ -1,5 +1,5 @@
 // This is a workaround for https://github.com/eslint/eslint/issues/3458
-require('@rushstack/eslint-config/patch/modern-module-resolution')
+require('@rushstack/eslint-patch/modern-module-resolution')
 
 const defaultExtends = require('./shared/extends.js')
 const defaultPlugins = require('./shared/plugins.js')
@@ -16,14 +16,6 @@ module.exports = {
   },
   plugins: defaultPlugins,
   parser: '@typescript-eslint/parser',
-  parserOptions: {
-    ecmaVersion: 6,
-    sourceType: 'module',
-    ecmaFeatures: {
-      jsx: true,
-      modules: true,
-    },
-  },
   reportUnusedDisableDirectives: true,
   rules: {
     // Import
@@ -53,6 +45,17 @@ module.exports = {
       files: ['testing-library.js'],
       rules: {
         'import/export': 'off',
+      },
+    },
+    {
+      files: ['*.ts', '*.tsx'],
+      plugins: [...defaultPlugins, '@typescript-eslint'],
+      extends: [...defaultExtends, 'plugin:@typescript-eslint/recommended'],
+    },
+    {
+      files: ['*.stories.tsx'],
+      rules: {
+        '@typescript-eslint/explicit-module-boundary-types': 'off',
       },
     },
   ],

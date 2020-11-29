@@ -1,7 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { render } from '@testing-library/react'
-import { ThemeProvider } from 'pcln-design-system'
+
+// Temporary workaround until we figure out what's wrong with the CJS index.js file
+import { ThemeProvider } from 'pcln-design-system/dist/cjs/ThemeProvider'
 
 const WithThemeProvider = ({ children }) => (
   <ThemeProvider>{children}</ThemeProvider>

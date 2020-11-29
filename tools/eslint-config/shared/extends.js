@@ -1,6 +1,5 @@
 module.exports = [
   'eslint:recommended',
-  'plugin:@typescript-eslint/recommended',
   'plugin:react/recommended',
   'plugin:jest/style',
   'plugin:sonarjs/recommended',

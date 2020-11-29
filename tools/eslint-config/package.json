@@ -21,7 +21,7 @@
   "author": "Priceline.com Design System Team",
   "license": "MIT",
   "dependencies": {
-    "@rushstack/eslint-config": "^1.3.0",
+    "@rushstack/eslint-patch": "^1.0.6",
     "@typescript-eslint/parser": "^4.8.2",
     "@typescript-eslint/eslint-plugin": "^4.8.2",
     "babel-eslint": "^10.1.0",
