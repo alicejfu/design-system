@@ -360,6 +360,13 @@
 
   "projects": [
     {
+      "packageName": "pcln-media-query-match",
+      "projectFolder": "packages/media-query-match",
+      "reviewCategory": "packages",
+      "shouldPublish": true
+    },
+
+    {
       "packageName": "pcln-menu",
       "projectFolder": "packages/menu",
       "reviewCategory": "packages",
